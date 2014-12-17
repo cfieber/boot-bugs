@@ -1,0 +1,27 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.0.RELEASE"
+  }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'spring-boot'
+
+plugins.withType(JavaPlugin) {
+  sourceCompatibility = 1.7
+  targetCompatibility = 1.7
+}
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile "org.codehaus.groovy:groovy-all:2.3.8"
+  compile "org.springframework.boot:spring-boot-starter-web:1.2.0.RELEASE"
+}
+
+
